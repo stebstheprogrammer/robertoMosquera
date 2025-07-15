@@ -228,18 +228,42 @@ video {
         box-sizing: border-box;
     }
 
+    /* Ajuste del contenedor principal */
     section {
         margin-top: 70px;
-        min-height: auto; /* Elimina altura mínima fija */
-        padding-bottom: 20px; /* Espacio inferior reducido */
+        min-height: calc(100vh - 140px); /* Altura mínima ajustada */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    /* Contenedor de la imagen principal */
+    /* Contenedor de la imagen */
+    .row .col-12 {
+        padding: 0 15px; /* Márgenes laterales */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh; /* Altura fija para estirar verticalmente */
+    }
+
+    /* Imagen King Kong con ajustes finales */
     .mainImg {
+        width: 100%;
+        height: 100%; /* Ocupa toda la altura del contenedor */
+        object-fit: cover; /* Cubre el área manteniendo proporciones */
+        object-position: center top; /* Enfoca la parte superior */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         max-width: 100%;
-        height: auto;
-        display: block;
         margin: 0 auto;
+    }
+
+    /* Ajuste fino para dispositivos muy estrechos */
+    @media (max-width: 400px) {
+        .row .col-12 {
+            padding: 0 10px;
+            height: 65vh;
+        }
     }
 
      /* Footer más compacto */
@@ -256,16 +280,6 @@ video {
     /* Imagen de Instagram más pequeña */
     .instagram {
         width: 40px;
-    }
-
-    /* Contenedor de la imagen King Kong */
-    .row .col-12 {
-        padding: 0 10px; /* Pequeños márgenes laterales */
-    }
-    
-    /* Elimina espacio innecesario debajo de la imagen */
-    .mainImg {
-        margin-bottom: 0;
     }
     
      /* Botón del menú - Versión mejorada */
