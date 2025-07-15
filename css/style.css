@@ -1,0 +1,277 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+}
+
+.img-title{
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.robertoBlue{
+    color: #0056d6 !important;
+}
+
+.robertoPink{
+    color: #ff4bff !important;
+}
+
+li{
+    display: inline-block;
+}
+
+.menu li a{
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+}
+
+section{
+    text-align: center;
+    width: 100%;
+    min-height: 800px;
+}
+
+.mainImg{
+    border-radius: 5px;
+    width: 100%;
+    Display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: black;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: antiquewhite; 
+}
+
+.instagram{
+    width: 60px;
+    margin-right: 10px;
+}
+
+.bio{
+    width: 70%;
+}
+
+.bio-container{
+    Display: flex;
+    justify-content: center;
+}
+
+.contactIg{
+    color: #000;
+    text-decoration: none;
+}
+
+/* Estilos mejorados para el menú móvil */
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    background: #000;
+    color: antiquewhite;
+    border: none;
+    padding: 5px 15px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background: #333;
+}
+
+.menu {
+    transition: all 0.3s ease;
+}
+
+.contact-info{
+    margin: 10px;
+}
+
+.gallery{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bio-img{
+    border-radius: 50%;
+    border: solid 2px #000;
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.artwork{
+    height: 400px;
+    width: 300px;
+    box-shadow: 10px 5px 5px rgb(3, 3, 3);
+    border-radius: 2px;
+}
+
+.artwork:hover{
+    cursor: pointer;
+    transition-duration: 1s;
+    transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+}
+
+.painting{
+    margin-bottom: 40px;
+}
+
+.slider{
+    width: 75vw;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    position: fixed;
+    z-index: 10;
+    margin-top: 250px;
+}
+
+.slider .slider-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(1000px * 6) ;
+}
+
+.slider .slide{
+    width: 1000px;
+}
+.slider .slide img{
+    width: 100%;
+    
+}
+
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100%{
+        -webkit-transform: translateX(calc(-1000px * 3));
+        transform: translateX(calc(-1000px * 3));
+    }
+}
+
+figcaption{
+    padding: 5px;
+}
+
+.video-container{
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+/* Elimina todo lo que está dentro de @media(max-width:650px) al final del CSS */
+/* Y reemplaza con esto: */
+
+/* Elimina los estilos anteriores del menú móvil y reemplaza con esto: */
+
+@media (max-width: 650px) {
+    /* Ajustes generales para el header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Botón del menú */
+    .menu-button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 30px;
+        background: transparent;
+        color: antiquewhite;
+        border: none;
+        padding: 5px;
+        z-index: 1001;
+        cursor: pointer;
+        margin: 0;
+    }
+    
+    /* Contenedor del menú */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.98);
+        z-index: 1000;
+        padding: 70px 0 0 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .menu.active {
+        display: flex;
+    }
+    
+    /* Items del menú */
+    .menu li {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu li a {
+        display: block;
+        font-size: 24px;
+        padding: 15px 15px 15px 60px;
+        color: antiquewhite !important;
+        background-color: transparent !important;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    
+    .menu li a:hover {
+        background: #333 !important;
+    }
+    
+    /* Ajuste para el contenido principal */
+    section {
+        margin-top: 70px; /* Espacio para el header */
+    }
+}
+
+
