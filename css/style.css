@@ -1,6 +1,11 @@
-*{
-    padding: 0%;
-    margin: 0%;
+/* Añade al inicio del CSS */
+html {
+    box-sizing: border-box;
+    overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body{
@@ -85,21 +90,7 @@ footer a{
 /* Estilos mejorados para el menú móvil */
 .menu-button {
     display: none;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    font-size: 30px;
-    background: #000;
-    color: antiquewhite;
-    border: none;
-    padding: 5px 15px;
-    z-index: 1000;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.menu-button:hover {
-    background: #333;
 }
 
 .menu {
@@ -192,14 +183,40 @@ video {
     min-height: 100vh;
   }
 
-/* Elimina todo lo que está dentro de @media(max-width:650px) al final del CSS */
-/* Y reemplaza con esto: */
-
-/* Elimina los estilos anteriores del menú móvil y reemplaza con esto: */
-
 @media (max-width: 650px) {
     /* Ajustes generales para el header */
+    .slider {
+        margin-top: 80px; /* Ajustado para el header fijo */
+        width: 100vw;
+        left: 0;
+        right: 0;
+        padding: 0;
+    }
+    
+    .slider .slider-track {
+        width: calc(520px * 12); /* Más estrecho en mobile */
+    }
+    
+    .slider .slide {
+        width: 520px; /* Más estrecho en mobile */
+    }
+    
+    @keyframes scroll {
+        100% {
+            transform: translateX(calc(-120px * 6));
+        }
+    }
+    
+    /* Asegura que el body no tenga scroll horizontal */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
     header {
+        width: 100vw;
+        max-width: 100vw;
         position: fixed;
         top: 0;
         left: 0;
@@ -208,22 +225,81 @@ video {
         z-index: 1000;
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
+    }
+
+    section {
+        margin-top: 70px;
+        min-height: auto; /* Elimina altura mínima fija */
+        padding-bottom: 20px; /* Espacio inferior reducido */
+    }
+
+    /* Contenedor de la imagen principal */
+    .mainImg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+     /* Footer más compacto */
+    footer {
+        margin-top: 20px;
+        padding: 15px;
     }
     
-    /* Botón del menú */
+    /* Ajuste para el texto del footer */
+    footer h2 {
+        font-size: 1.2rem;
+    }
+    
+    /* Imagen de Instagram más pequeña */
+    .instagram {
+        width: 40px;
+    }
+
+    /* Contenedor de la imagen King Kong */
+    .row .col-12 {
+        padding: 0 10px; /* Pequeños márgenes laterales */
+    }
+    
+    /* Elimina espacio innecesario debajo de la imagen */
+    .mainImg {
+        margin-bottom: 0;
+    }
+    
+     /* Botón del menú - Versión mejorada */
     .menu-button {
         display: block;
         position: absolute;
         top: 10px;
         left: 15px;
-        font-size: 30px;
-        background: transparent;
-        color: antiquewhite;
+        font-size: 2rem;
+        background: transparent !important;
         border: none;
-        padding: 5px;
+        padding: 10px;
         z-index: 1001;
         cursor: pointer;
         margin: 0;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 44px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Ícono de hamburguesa (☰) - Color oscuro */
+    .menu-button::before {
+        content: '☰';
+        color: rgb(8, 8, 8);
+    }
+    
+    /* Cuando el menú está activo (mostrando la X) */
+    .menu-button.active::before {
+        content: '×';
+        color: rgb(243, 241, 241);
+        font-size: 2.5rem; /* X más grande */
+        line-height: 1; /* Ajuste fino de posición */
     }
     
     /* Contenedor del menú */
@@ -244,29 +320,38 @@ video {
     
     .menu.active {
         display: flex;
+        flex-direction: column;
+        padding: 70px 0 0 60px; /* Ajuste de padding izquierdo */
     }
     
-    /* Items del menú */
-    .menu li {
-        width: 100%;
-        text-align: left;
-        padding: 0;
+     /* Primer elemento del menú (Home) */
+    .menu.active li:first-child {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        width: auto;
         margin: 0;
+        padding: 0;
+    }
+
+    /* Estilo específico para el enlace Home */
+    .menu.active li a {
+        padding: 10px 15px;
+        font-size: 1.8rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+    }
+
+     /* Ajuste para los demás elementos del menú */
+    .menu.active li:not(:first-child) {
+        margin-top: 15px;
     }
     
-    .menu li a {
-        display: block;
-        font-size: 24px;
-        padding: 15px 15px 15px 60px;
-        color: antiquewhite !important;
-        background-color: transparent !important;
-        text-decoration: none;
-        transition: background 0.3s;
+    /* Ajuste fino del botón de cierre */
+    .menu-button.active::before {
+        line-height: 1.1; /* Mejor alineación vertical con Home */
     }
     
-    .menu li a:hover {
-        background: #333 !important;
-    }
     
     /* Ajuste para el contenido principal */
     section {
