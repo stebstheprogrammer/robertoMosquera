@@ -74,17 +74,23 @@ footer a{
 }
 
 .bio{
-    width: 70%;
-}
-
-.bio-container{
-    Display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .contactIg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #000;
     text-decoration: none;
+}
+
+.bio-content{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
 }
 
 /* Estilos mejorados para el menú móvil */
@@ -103,16 +109,29 @@ footer a{
 
 .gallery{
     width: 100%;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.bio-img{
+.bio-img {
     border-radius: 50%;
-    border: solid 2px #000;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Aumenté el blur para mayor visibilidad */
     height: 300px;
     width: 300px;
     box-sizing: border-box;
+    display: block; /* Asegura que la sombra se aplique correctamente */
+    background: white; /* Fondo sólido para contrastar con la sombra */
+    object-fit: cover; /* Evita deformaciones en la imagen */
+    margin: 0 auto; /* Centrado adicional */
 }
+
+/* Ajuste para el email */
+    .contact-email {
+        font-size: 1.2rem;
+        color: #0056d6;
+        font-weight: bold;
+    }
 
 .artwork{
     height: 400px;
@@ -121,16 +140,18 @@ footer a{
     border-radius: 2px;
 }
 
-.artwork:hover{
-    cursor: pointer;
-    transition-duration: 1s;
-    transform: scale(1.2, 1.2);
-    -ms-transform: scale(1.2, 1.2);
-    -webkit-transform: scale(1.2, 1.2);
-}
+
 
 .painting{
     margin-bottom: 40px;
+}
+
+.painting:hover{
+    cursor: pointer;
+    transition-duration: 1s;
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
 }
 
 .slider{
@@ -183,10 +204,60 @@ video {
     min-height: 100vh;
   }
 
+/* ===== ESTILOS ESPECÍFICOS PARA CONTACT.HTML ===== */
+.contact-section {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Espacio uniforme entre elementos */
+}
+
+/* Contenedor de información de contacto */
+.contact-content {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo para mejor lectura */
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para apilar verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: 20px;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px 0; /* Espaciado vertical */
+}
+
+/* Estilos para los elementos de contacto */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    text-align: center; /* Centra el texto */
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+}
+
+/* Video responsive */
+.contact-video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
 @media (max-width: 650px) {
     /* Ajustes generales para el header */
     .slider {
-        margin-top: 80px; /* Ajustado para el header fijo */
+        margin-top: 180px; /* Ajustado para el header fijo */
         width: 100vw;
         left: 0;
         right: 0;
@@ -370,6 +441,84 @@ video {
     /* Ajuste para el contenido principal */
     section {
         margin-top: 70px; /* Espacio para el header */
+    }
+
+     .contact-section {
+        min-height: calc(100vh - 110px); /* Altura dinámica */
+    }
+
+    .contact-section h1 {
+        margin-bottom: 5px; /* Reduce el espacio debajo del título */
+    }
+    
+    .contact-content {
+        gap: 10px; /* Reduce el espacio entre Instagram y email */
+        margin-top: 1px; /* Reduce el espacio superior */
+        padding: 10px 0; /* Reduce el padding vertical */
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1px;
+    }
+    
+    .contact-video video {
+        margin-top: 20px;
+        min-height: auto;
+        max-height: 40vh;
+    }
+    
+    /* Ajuste para el email */
+    .contact-email {
+        font-size: 1.2rem;
+        color: #0056d6;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    /* 2. Mejor centrado del contenido */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    /* 1. Eliminar ONLY animaciones de .gallery */
+    .gallery .artwork {
+        transform: none !important;
+        -webkit-transform: none !important;
+        transition: none !important;
+    }
+    
+    .painting {
+        width: 100%;
+        max-width: 350px; /* Ancho máximo para mejor visualización */
+        margin-bottom: 30px;
+    }
+    
+    .artwork {
+        width: 100%;
+         max-height: 60vh; /* 60% del alto de la pantalla */
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin: 0 auto;
+        display: block;
+    }
+    
+    figcaption {
+        padding: 10px 5px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: center;
+        word-break: break-word;
+    }
+    
+    /* Ajuste para el título */
+    section h1 {
+        font-size: 1.8rem;
+        margin: 0px 0 20px 0;
     }
 }
 
