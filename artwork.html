@@ -9,8 +9,37 @@
         <link rel="icon" type="image/x-icon" href="img/icon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <title>Roberto Mosquera</title>
+        <style>
+            /* Estilo para el botón Ir arriba */
+            .back-to-top {
+                position: fixed;
+                bottom: 160px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.7); /* Ligera transparencia */
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 999;
+                transition: opacity 0.3s;
+            }
+            
+            .back-to-top:hover {
+                opacity: 0.8;
+            }
+        </style>
     </head>
   <body>
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Ir arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <header class="row">
       <div class="col-xl-1">
           <button class="menu-button" aria-label="Menú"></button>
@@ -32,92 +61,92 @@
         <div class="row gallery">
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/3 king kong.jpg" alt="king kong" width="90%" class="artwork" onclick="window.open('img/3 king kong.jpg', '_blank');">
-            <figcaption>THE KING IN PINK, KINKY KONG.   Acrylic on Canvas, NYC 2024.  "46 X 70"</figcaption>
+            <figcaption>THE KING IN PINK, KINKY KONG.   Acrylic on Canvas, NYC 2024. <br>  "46 X 70".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/2 marilyn monroe.jpg" alt="marilyn monroe" width="90%" class="artwork"onclick="window.open('img/2 marilyn monroe.jpg', '_blank');">
-            <figcaption>SILVER GODESS.  Acrylic and Silver Leaf on Wood, NYC 2024.  6" X 6"</figcaption>
+            <figcaption>SILVER GODESS.  Acrylic and Silver Leaf on Wood, NYC 2024. <br>  6" X 6".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/4 hombre de negro.jpg" alt="man" width="90%" class="artwork" onclick="window.open('img/4 hombre de negro.jpg', '_blank');">
-            <figcaption>THE MARTIAN WHO FOUND OIL. Gold leaf and Mixed media on Wood, NYC 2025 12" X 12"</figcaption>
+            <figcaption>THE MARTIAN WHO FOUND OIL. Gold leaf and Mixed media on Wood, NYC 2025. <br> 12" X 12".</figcaption>
           </div>
         </div>
 
         <div class="row gallery">
           
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/wonder-woman.jpg" alt="wonder woman" width="90%" class="artwork" onclick="window.open('img/mujer-maravilla.jpeg', '_blank');">
-            <figcaption>THE POLLOC LAZZO OF WONDER WOMAN. Acrylic and Silver Leaf on Canvas, NYC 2024  62" X 66"</figcaption>
+            <img src="img/new/wonder-woman.jpg" alt="wonder woman" width="90%" class="artwork" onclick="window.open('img/new/wonder-woman.jpg', '_blank');">
+            <figcaption>THE POLLOC LAZZO OF WONDER WOMAN. Acrylic and Silver Leaf on Canvas, NYC 2024. <br>  62" X 66".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/collage.jpg" alt="varias" width="90%" class="artwork" onclick="window.open('img/7 varias.jpg', '_blank');">
-            <figcaption>ICONS AND OTHER CONS. Acrylic, Silver and Gold Leaf on wood and Canvas, NYC 2024. 40" X 40" (Aprox)</figcaption>
+            <img src="img/new/collage.jpg" alt="varias" width="90%" class="artwork" onclick="window.open('img/new/collage.jpg', '_blank');">
+            <figcaption>ICONS AND OTHER CONS. Acrylic, Silver and Gold Leaf on wood and Canvas, NYC 2024. <br> 40" X 40" (Aprox)</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/9 cubo rubik.jpg" alt="rubik" width="90%" class="artwork" onclick="window.open('img/9 cubo rubik.jpg', '_blank');">
-            <figcaption>QUANTUM COLORS.  Acrylic and Silver Leaf on Wood, NYC 2024. 6" X 6"</figcaption>
+            <figcaption>QUANTUM COLORS.  Acrylic and Silver Leaf on Wood, NYC 2024. <br> 6" X 6".</figcaption>
           </div>
         </div>
 
         <div class="row gallery">
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/astroboy.jpg" alt="astroboy painting" width="90%" class="artwork" onclick="window.open('img/astroboy.jpg', '_blank');">
-            <figcaption>ASTROBOY IN CHERRYLAND.  Acrylic on Canvas, NYC 2023. 40 X 61"</figcaption>
+            <figcaption>ASTROBOY IN CHERRYLAND.  Acrylic on Canvas, NYC 2023. <br> 40" X 61".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/king-kong.jpg" alt="astract man" width="90%" class="artwork" onclick="window.open('img/hombre-abstracto.jpeg', '_blank');">
-            <figcaption>PURPLE LOVE.  Mixed Media on Canvas, NYC 2024. 48" X 96"</figcaption>
+            <img src="img/new/king-kong.jpg" alt="astract man" width="90%" class="artwork" onclick="window.open('img/new/king-kong.jpg', '_blank');">
+            <figcaption>PURPLE LOVE.  Mixed Media on Canvas, NYC 2024. <br> 48" X 96".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
             <img src="img/hombre-sombrero.jpeg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/hombre-sombrero.jpeg', '_blank');">
-            <figcaption>SUPER ALIEN IN NY.  Acrylic and Silver Leaf on Wood, NYC 2024.  8" Diameter</figcaption>
+            <figcaption>SUPER ALIEN IN NY.  Acrylic and Silver Leaf on Wood, NYC 2024. <br>  8" Diameter.</figcaption>
           </div>
         </div>
 
         <div class="row gallery">
           <div class="col-xl-4 painting">
-            <img src="img/new/marino.jpeg" alt="collage" width="90%" class="artwork" onclick="window.open('img/marino-collage.jpeg', '_blank');">
-            <figcaption>THE TOY, MILK, CAKE, FIRE, TIN... MAN. Acrylic and Mixed Media on Canvas, NYC 2024. 32 X 36" (each panel)</figcaption>
+            <img src="img/new/marino.jpeg" alt="collage" width="90%" class="artwork" onclick="window.open('img/new/marino.jpeg', '_blank');">
+            <figcaption>THE TOY, MILK, CAKE, FIRE, TIN... MAN. Acrylic and Mixed Media on Canvas, NYC 2024. <br> 32 X 36" (each panel).</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/Astro Boy in Paris....jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/mujer-astronauta.jpg', '_blank');">
-            <figcaption>Astro Boy in Paris... Acrylic on canvas, NYC 2025. 57" X 63"</figcaption>
+            <img src="img/new/Astro Boy in Paris....jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/new/Astro Boy in Paris....jpg', '_blank');">
+            <figcaption>Astro Boy in Paris... Acrylic on canvas, NYC 2025. <br> 57" X 63".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/Hi, Yo Silver.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/hombre-sombrero.jpeg', '_blank');">
-            <figcaption>Hi Yo Silver. Acrylic on canvas, NYC 2025. 96" X 48"</figcaption>
+            <img src="img/new/Hi, Yo Silver.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/new/Hi, Yo Silver.jpg', '_blank');">
+            <figcaption>Hi Yo Silver. Acrylic on canvas, NYC 2025. <br> 96" X 48".</figcaption>
           </div>
         </div>
 
         <div class="row gallery">
           <div class="col-xl-4 painting">
-            <img src="img/new/Tintin, Bolivar and Dr. No.jpg" alt="collage" width="90%" class="artwork" onclick="window.open('img/marino-collage.jpeg', '_blank');">
-            <figcaption>Tintin, Bolivar and Dr. No.jpg. Acrylic on canvas, NYC 2025. 57" X 63"</figcaption>
+            <img src="img/new/Tintin, Bolivar and Dr. No.jpg" alt="collage" width="90%" class="artwork" onclick="window.open('img/new/Tintin, Bolivar and Dr. No.jpg', '_blank');">
+            <figcaption>Tintin, Bolivar and Dr. No. Acrylic on canvas, NYC 2025. <br> 57" X 63".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/The Martian.  16_ X 16_.jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/mujer-astronauta.jpg', '_blank');">
-            <figcaption>The Martian.  16_ X 16. Acrylic on canvas, NYC 2025.</figcaption>
+            <img src="img/new/The Martian.  16_ X 16_.jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/new/The Martian.  16_ X 16_.jpg', '_blank');">
+            <figcaption>The Martian. Acrylic on canvas, NYC 2025. <br> 16" X 16".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/OFF - AIR. 32_ X 42_ jpg.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/hombre-sombrero.jpeg', '_blank');">
-            <figcaption>OFF - AIR. 32_ X 42. Acrylic on canvas, NYC 2025.</figcaption>
+            <img src="img/new/OFF - AIR. 32_ X 42_ jpg.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/new/OFF - AIR. 32_ X 42_ jpg.jpg', '_blank');">
+            <figcaption>OFF - AIR.  Acrylic on canvas, NYC 2025. <br> 32" X 42".</figcaption>
           </div>
         </div>
 
         <div class="row gallery">
           <div class="col-xl-4 painting">
-            <img src="img/new/The Good Wife. 32_ X 36_ each panel.jpg" alt="collage" width="90%" class="artwork" onclick="window.open('img/marino-collage.jpeg', '_blank');">
-            <figcaption>The Good Wife. 32_ X 36_ each panel. Acrylic on canvas, NYC 2025.</figcaption>
+            <img src="img/new/The Good Wife. 32_ X 36_ each panel.jpg" alt="collage" width="90%" class="artwork" onclick="window.open('img/new/The Good Wife. 32_ X 36_ each panel.jpg', '_blank');">
+            <figcaption>The Good Wife. Acrylic on canvas, NYC 2025. <br> 32" X 36" each panel.</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/Sailor Mercury reaching for Moon. 57_ X 126_.jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/mujer-astronauta.jpg', '_blank');">
-            <figcaption>Sailor Mercury reaching for Moon. 57_ X 126. Acrylic on canvas, NYC 2025.</figcaption>
+            <img src="img/new/Sailor Mercury reaching for Moon. 57_ X 126_.jpg" alt="astronut woman" width="90%" class="artwork" onclick="window.open('img/new/Sailor Mercury reaching for Moon. 57_ X 126_.jpg', '_blank');">
+            <figcaption>Sailor Mercury reaching for Moon. Acrylic on canvas, NYC 2025. <br> 57" X 126".</figcaption>
           </div>
           <div class="col-xl-4 col-md-12 painting">
-            <img src="img/new/When Elvis Found Oil.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/hombre-sombrero.jpeg', '_blank');">
+            <img src="img/new/When Elvis Found Oil.jpg" alt="man wearing a hat" width="90%" class="artwork" onclick="window.open('img/new/When Elvis Found Oil.jpg', '_blank');">
             <figcaption></figcaption>
-            <figcaption>When Elvis Found Oil. Acrylic on canvas, NYC 2025. 96" X 48"</figcaption>
+            <figcaption>When Elvis Found Oil. Acrylic on canvas, NYC 2025. <br> 96" X 48".</figcaption>
           </div>
         </div>
       </div>
